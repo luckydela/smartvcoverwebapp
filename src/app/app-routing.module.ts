@@ -16,24 +16,31 @@ import { BuypolicyComponent } from './modules/buypolicy/buypolicy.component';
 import { TransactionsComponent } from './modules/transactions/transactions.component';
 import { PaymentsComponent } from './modules/payments/payments.component';
 import { ViewquoteComponent } from './modules/viewquote/viewquote.component';
+import { DefaultComponent } from './layouts/default/default.component';
 
 const routes: Routes = [
   {path:'', component: LandingloginComponent},
-  {path:'dashboard', component:DashboardComponent},
-  {path:'profile', component:ProfileComponent},
-  {path:'settings', component:SettingsComponent},
-  {path:'soldpolicies', component:SoldpoliciesComponent},
-  {path:'mycommision', component:MycommisionComponent},
-  {path:'notifications', component:NotificationsComponent}, 
-  {path:'mysitcker', component: MystickerComponent},
-  {path:'myclaims', component: MyclaimsComponent},
-  {path:'claimstatus', component: ClaimstatusComponent},
-  {path:'make-a-claim', component: MakeaclaimComponent},
-  {path:'mypolicies', component:MypoliciesComponent},
-  {path:'buypolicy', component:BuypolicyComponent},
-  {path:'transactions', component: TransactionsComponent},
-  {path:'payments', component: PaymentsComponent},
-  {path:'viewquote', component: ViewquoteComponent} 
+  {path:'', component:DefaultComponent,
+  children:[
+    {path:'dashboard', component:DashboardComponent},
+    {path:'profile', component:ProfileComponent},
+    {path:'settings', component:SettingsComponent},
+    {path:'soldpolicies', component:SoldpoliciesComponent},
+    {path:'mycommision', component:MycommisionComponent},
+    {path:'notifications', component:NotificationsComponent}, 
+    {path:'mysitcker', component: MystickerComponent},
+    {path:'myclaims', component: MyclaimsComponent},
+    {path:'claimstatus', component: ClaimstatusComponent},
+    {path:'make-a-claim', component: MakeaclaimComponent},
+    {path:'mypolicies', component:MypoliciesComponent},
+    {path:'buypolicy', component:BuypolicyComponent},
+    {path:'transactions', component: TransactionsComponent},
+    {path:'payments', component: PaymentsComponent},
+    {path:'viewquote', component: ViewquoteComponent} 
+  ]
+
+},
+ 
 ];
 
 @NgModule({
