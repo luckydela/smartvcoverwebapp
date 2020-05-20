@@ -17,6 +17,7 @@ import { TransactionsComponent } from './modules/transactions/transactions.compo
 import { PaymentsComponent } from './modules/payments/payments.component';
 import { ViewquoteComponent } from './modules/viewquote/viewquote.component';
 import { DefaultComponent } from './layouts/default/default.component';
+import { CreateaccountComponent } from './createaccount/createaccount.component';
 
 const routes: Routes = [
   {path:'', component: LandingloginComponent},
@@ -40,6 +41,7 @@ const routes: Routes = [
   ]
 
 },
+{path:'createaccount', component: CreateaccountComponent},
  
 ];
 

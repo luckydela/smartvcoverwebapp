@@ -19,10 +19,12 @@ import { MystickerComponent } from 'src/app/modules/mysticker/mysticker.componen
 import { TransactionsComponent } from 'src/app/modules/transactions/transactions.component';
 import { PaymentsComponent } from 'src/app/modules/payments/payments.component';
 import { ViewquoteComponent } from 'src/app/modules/viewquote/viewquote.component';
+import { CreateaccountComponent } from 'src/app/createaccount/createaccount.component';
 
 @NgModule({
   declarations: [
     LandingloginComponent,
+    CreateaccountComponent,
     DefaultComponent,
     DashboardComponent,
     ProfileComponent,
@@ -39,8 +41,6 @@ import { ViewquoteComponent } from 'src/app/modules/viewquote/viewquote.componen
     TransactionsComponent,
     PaymentsComponent,
     ViewquoteComponent,
-    
-
   ],
   imports: [
     CommonModule,
