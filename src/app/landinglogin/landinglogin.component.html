@@ -1,8 +1,36 @@
-<div class="all">
-  <input type="text" placeholder="Phone Number">
-<input type="password" placeholder="Pin">
-<button>login</button>
+<div class="container">
+  <h1>smartCover</h1>
+  <div class="container-inner">
+    <div class="left">
+      <h1 id="left-heading">Create Quote Instantly</h1>
+      <div class="menu-items">
+        <div class="item">
+          <img src="../../assets/img/motoricon.png" alt="">
+          <p>Motor Insurance</p>
+        </div>
+        <div class="item">
+          <img src="../../assets/img/homeicon.png" alt="">
+          <p>Home Insurance</p>
+        </div>
+        <div class="item">
+          <img src="../../assets/img/travelicon.png" alt="">
+          <p>Travel Insurance</p>
+        </div>
+      </div>
+    </div>
+    <div class="login-form">
+      <h1>Customer Login</h1>
+      <div class="form-input">
+        <input type="text" placeholder="Email">
+      </div>
+      <div class="form-input">
+        <input type="text" placeholder="Password">
+      </div>
+      <button (click)="login()"> Login </button>
+      <div class="forgotten-password">
+        <p>Create Account</p>
+        <p id="forgotten">Forgotten Password</p>
+      </div>
+    </div>
+  </div>
 </div>
-
-
-<router-outlet></router-outlet>
