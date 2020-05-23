@@ -46,6 +46,18 @@ header::after{
     z-index: 2;
     font-weight: 500;
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    .bars {
+
+    }
+    .bar {
+        height: 1px;
+        width: 20px;
+        border-bottom: 1px solid #fff; 
+        margin: 0 10px 2px 0;
+    }
 }
 
 .page {
