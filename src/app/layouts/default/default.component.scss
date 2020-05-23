@@ -96,12 +96,15 @@ header::after{
     .aside-items {
         
         .aside-item {
-            padding: 0 2rem;
+            h3 {
+                padding: 0 2rem;
+            }
 
             .item {
                 display: flex;
                 margin: 15px 5px;
-                
+                padding: 0 2rem;
+                cursor: pointer;
                 img {
                     margin-right: 5px;
                 }

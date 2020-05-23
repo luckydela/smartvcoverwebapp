@@ -4,3 +4,17 @@
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-divider {
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid #2b9ee0;
+}
+h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
