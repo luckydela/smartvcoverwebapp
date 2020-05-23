@@ -4,3 +4,34 @@
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-divider {
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid #2b9ee0;
+}
+h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #2b9ee0;
+}
