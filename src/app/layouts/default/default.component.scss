@@ -1,21 +1,18 @@
 .container {
-
+    display: flex;
+    flex-direction: column;
 }
 header {
     box-sizing: border-box;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     color: #fff;
-    padding: 80px 50px;
+    padding: 25px 40px;
     position: relative;
     background: url(../../../assets/img/homepageicon.jpg) no-repeat center center/cover;
 
-    h1 {
-        z-index: 2;
-        font-weight: 500;
-        font-size: 1.8rem;
-    }
     img {
         height: 30px;
         width: 30px;
@@ -30,4 +27,91 @@ header::after{
     height: 100%;
     z-index:1;
     background: rgba(28, 142, 227, 0.7);
+}
+
+.header-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header-item {
+        margin-right: 1.5rem;
+        z-index: 2;
+        flex:1 1 auto;
+        cursor: pointer;
+        font-weight: 600;
+        opacity: 0.8;
+    }
+}
+.brand {
+    z-index: 2;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.page {
+    display: flex;
+
+    aside {
+        background: #1e6caa;
+        padding: 10px 0;
+        width: 300px;
+        height: 100vh;
+        color: #fff;
+
+        h3 {
+            opacity: 0.8;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+        .divider {
+            height: 1px;
+            width: 100%;
+            border-bottom: 1px solid #f6a569;
+            margin: 5px 0;
+        }
+    }
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h4 {
+            color: #f6a569;
+            font-weight: 400;
+        }
+        img {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+        }
+    }
+    .aside-items {
+        
+        .aside-item {
+            padding: 0 2rem;
+
+            .item {
+                display: flex;
+                margin: 15px 5px;
+                
+                img {
+                    margin-right: 5px;
+                }
+                p {
+                    opacity: 0.8;
+                    font-weight: 600;
+                    font-size: 0.8rem; 
+                }
+                #active {
+                    color: #f6a569; 
+                }
+            }
+        }
+    }
+
+    main {
+        padding: 50px 100px;
+        background: #eeeeee;
+        width: 100%;
+        color: #4485bd;
+    }
 }

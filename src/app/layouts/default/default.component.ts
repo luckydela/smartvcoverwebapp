@@ -14,7 +14,7 @@ export class DefaultComponent implements OnInit {
   }
 
   route(){
-    this.router.navigate(['/settings'])
+    this.router.navigate(['/dashboard'])
   }
 
 }
