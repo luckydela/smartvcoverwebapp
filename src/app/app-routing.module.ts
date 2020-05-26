@@ -18,6 +18,7 @@ import { PaymentsComponent } from './modules/payments/payments.component';
 import { ViewquoteComponent } from './modules/viewquote/viewquote.component';
 import { DefaultComponent } from './layouts/default/default.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
+import { MotorinsuranceComponent } from './modules/motorinsurance/motorinsurance.component';
 
 const routes: Routes = [
   {path:'', component: LandingloginComponent},
@@ -41,6 +42,7 @@ const routes: Routes = [
   ]
 
 },
+{path:'motorinsurance', component: MotorinsuranceComponent},
 {path:'createaccount', component: CreateaccountComponent},
  
 ];

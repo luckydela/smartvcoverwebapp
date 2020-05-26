@@ -5,7 +5,7 @@
       <h1 id="left-heading">Create Quote Instantly</h1>
       <span>Products</span>
       <div class="menu-items">
-        <div class="item">
+        <div class="item" (click)="route('motorinsurance')">
           <img src="../../assets/img/motoricon.png" alt="">
           <p>Motor Insurance</p>
         </div>
@@ -20,9 +20,10 @@
       </div>
     </div>
     <div class="login-form">
-      <h1>Customer Login</h1>
+      <h1>{{formtitle}}</h1>
       <div class="form-input">
-        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Email" *ngIf="formtitle==='Customer Login'">
+        <input type="text" placeholder="Phone" *ngIf="formtitle==='Agent Login'">
       </div>
       <div class="form-input">
         <input type="text" placeholder="Password">
@@ -32,6 +33,7 @@
         <p>Create Account</p>
         <p id="forgotten">Forgot Password?</p>
       </div>
+      <p id="formstate" (click)="show()">{{formstate}}</p>
     </div>
   </div>
 </div>
