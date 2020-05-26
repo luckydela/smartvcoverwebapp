@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./landinglogin.component.scss']
 })
 export class LandingloginComponent implements OnInit {
-
+  formstate:any = 'Agent Login';
+  formtitle:any = 'Customer Login'
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -15,5 +16,12 @@ export class LandingloginComponent implements OnInit {
 
   login(){
     this.router.navigate(['/dashboard'])
+  }
+  route(path:any){
+    this.router.navigate([path])
+  }
+  show(state:any){
+    this.formstate = this.formstate === 'Agent Login' ? 'Customer Login' : 'Agent Login';
+    this.formtitle = this.formstate === 'Agent Login' ? 'Customer Login' : 'Agent Login';
   }
 }
