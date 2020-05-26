@@ -10,108 +10,110 @@
     <div class="header-item">Finally here, <span>Hi</span></div>
   </header>
   <div class="page">
-    <div class="personal-info">
-      <div class="image">
-        <img src="../../../assets/img/Avatar.png" alt="">
-        <p>Hi,</p>
-        let us create your quote here
-      </div>
-      <div class="info">
-        <p>Personal Information</p>
-        <div class="info-form">
-          <div class="left">
-            <div class="form-input">
-              <label>First Name</label>
-              <input type="text" placeholder="First Name">
+    <form [formGroup]="form">
+      <div class="personal-info">
+        <div class="image">
+          <img src="../../../assets/img/Avatar.png" alt="">
+          <p>Hi,</p>
+          let us create your quote here
+        </div>
+        <div class="info">
+          <p>Personal Information</p>
+          <div class="info-form">
+            <div class="left">
+              <div class="form-input">
+                <label>First Name</label>
+                <input type="text" placeholder="First Name" formControlName="customer_first_name">
+              </div>
+              <div class="form-input">
+                <label>Other Names</label>
+                <input type="text" placeholder="Other Names" formControlName="customer_other_names">
+              </div>
+              <div class="form-input">
+                <label>Mobile Number</label>
+                <input type="text" placeholder="Mobile Number">
+              </div>
             </div>
-            <div class="form-input">
-              <label>Other Names</label>
-              <input type="text" placeholder="Other Names">
-            </div>
-            <div class="form-input">
-              <label>Mobile Number</label>
-              <input type="text" placeholder="Mobile Number">
-            </div>
-          </div>
-          <div class="right">
-            <div class="form-input">
-              <label>Last Name</label>
-              <input type="text" placeholder="Last Name">
-            </div>
-            <div class="form-input">
-              <label>Email</label>
-              <input type="email" placeholder="Email">
-            </div>
-            <div class="form-input">
-              <label>Cover Type</label>
-              <input type="text" placeholder="Cover Type">
+            <div class="right">
+              <div class="form-input">
+                <label>Last Name</label>
+                <input type="text" placeholder="Last Name">
+              </div>
+              <div class="form-input">
+                <label>Email</label>
+                <input type="email" placeholder="Email">
+              </div>
+              <div class="form-input">
+                <label>Cover Type</label>
+                <input type="text" placeholder="Cover Type">
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="vehicle-info">
-      <p>Vehicle  Information</p>
-        <div class="info-form">
-          <div class="left">
-            <div class="form-input">
-              <label>Schedule Type</label>
-              <input type="text" placeholder="Schedule Type">
+      <div class="vehicle-info">
+        <p>Vehicle  Information</p>
+          <div class="info-form">
+            <div class="left">
+              <div class="form-input">
+                <label>Schedule Type</label>
+                <input type="text" placeholder="Schedule Type">
+              </div>
+              <div class="form-input">
+                <label>Duration</label>
+                <input type="text" placeholder="Duration">
+              </div>
+              <div class="form-input">
+                <label>Year of Manufacture</label>
+                <input type="text" placeholder="Mobile Number">
+              </div>
+              <div class="form-input">
+                <label>Make</label>
+                <input type="text" placeholder="Make">
+              </div>
             </div>
-            <div class="form-input">
-              <label>Duration</label>
-              <input type="text" placeholder="Duration">
+            <div class="right">
+              <div class="form-input">
+                <label>Number of Seats</label>
+                <input type="text" placeholder="Number of Seats">
+              </div>
+              <div class="form-input">
+                <label>Model</label>
+                <input type="text" placeholder="Model">
+              </div>
+              <div class="form-input">
+                <label>Cubic Capacity</label>
+                <input type="text" placeholder="Cubic capacity">
+              </div>
+              <div class="form-input">
+                <label>Mileage</label>
+                <input type="text" placeholder="Mileage">
+              </div>
             </div>
-            <div class="form-input">
-              <label>Year of Manufacture</label>
-              <input type="text" placeholder="Mobile Number">
-            </div>
-            <div class="form-input">
-              <label>Make</label>
-              <input type="text" placeholder="Make">
+            <div class="right">
+              <div class="form-input">
+                <label>Vehicle Registration Number</label>
+                <input type="text" placeholder="Vehicle Registration Number">
+              </div>
+              <div class="form-input">
+                <label>Chasis Number</label>
+                <input type="text" placeholder="Chasis Number">
+              </div>
+              <div class="form-input">
+                <label>Body Type</label>
+                <input type="text" placeholder="Body Type">
+              </div>
+              <div class="form-input">
+                <label>Cost of Vehicle</label>
+                <input type="text" placeholder="Cost of Vehicle">
+              </div>
             </div>
           </div>
-          <div class="right">
-            <div class="form-input">
-              <label>Number of Seats</label>
-              <input type="text" placeholder="Number of Seats">
-            </div>
-            <div class="form-input">
-              <label>Model</label>
-              <input type="text" placeholder="Model">
-            </div>
-            <div class="form-input">
-              <label>Cubic Capacity</label>
-              <input type="text" placeholder="Cubic capacity">
-            </div>
-            <div class="form-input">
-              <label>Mileage</label>
-              <input type="text" placeholder="Mileage">
-            </div>
-          </div>
-          <div class="right">
-            <div class="form-input">
-              <label>Vehicle Registration Number</label>
-              <input type="text" placeholder="Vehicle Registration Number">
-            </div>
-            <div class="form-input">
-              <label>Chasis Number</label>
-              <input type="text" placeholder="Chasis Number">
-            </div>
-            <div class="form-input">
-              <label>Body Type</label>
-              <input type="text" placeholder="Body Type">
-            </div>
-            <div class="form-input">
-              <label>Cost of Vehicle</label>
-              <input type="text" placeholder="Cost of Vehicle">
-            </div>
-          </div>
-        </div>
-    </div>
+      </div>
+    </form>
     <div class="buttons">
       <button class="btn btn-plain" (click)="route('')">Back</button>
-      <button class="btn btn-primary">Continue</button>
+      <button class="btn btn-primary" (click)="makerequest()">Continue</button>
     </div>
   </div>
 </div>
