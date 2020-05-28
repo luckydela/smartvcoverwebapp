@@ -1,15 +1,16 @@
-.messages {
-    // padding: 15px;
-    // width: 500px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // flex-direction: column;
-}
+// .messages {
+//     // padding: 15px;
+//     // width: 500px;
+//     // display: flex;
+//     // align-items: center;
+//     // justify-content: center;
+//     // flex-direction: column;
+// }
 
 .close {
     display: flex;
     justify-content: flex-end;
+    cursor: pointer;
 }
 .message {
     padding: 10px;

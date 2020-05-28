@@ -14,18 +14,22 @@ export class NotificationComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
+    console.log(this.message);
+    
     
   }
   ngAfterViewInit(){
-    setTimeout(()=>{
-      this.show = false
-    }, this.time)
-    console.log('allen');
+    // setTimeout(()=>{
+    //   this.show = false
+    // }, this.time)
+    // console.log('allen');
     
   }
   ngAfterContentInit(): void {
-    console.log('Kwasi');
+    // console.log('Kwasi');
     
+  }
+  close(){
+    this.show = false;
   }
 }
