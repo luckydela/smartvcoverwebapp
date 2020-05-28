@@ -23,10 +23,10 @@
       <h1>{{formtitle}}</h1>
       <div class="form-input">
         <input type="text" placeholder="Email" *ngIf="formtitle==='Customer Login'">
-        <input type="text" placeholder="Phone" *ngIf="formtitle==='Agent Login'">
+        <input type="text" placeholder="Adent ID" *ngIf="formtitle==='Agent Login'">
       </div>
       <div class="form-input">
-        <input type="text" placeholder="Password">
+        <input type="text" placeholder="Phone Number" *ngIf="formtitle==='Customer Login'">
       </div>
       <button (click)="login()"> Log In </button>
       <div class="forgotten-password">

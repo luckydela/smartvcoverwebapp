@@ -10,7 +10,9 @@
     <div class="header-item">Finally here, <span>Hi</span></div>
   </header>
   <div class="page">
-    <form [formGroup]="form">
+    <app-notification [message]="notification.message" [type]="notification.type" [show]="notification.show" [time]="notification.time"></app-notification>
+    
+    <form [formGroup]="form" (ngSubmit)="makerequest()">
       <div class="personal-info">
         <div class="image">
           <img src="../../../assets/img/Avatar.png" alt="">
@@ -31,21 +33,26 @@
               </div>
               <div class="form-input">
                 <label>Mobile Number</label>
-                <input type="text" placeholder="Mobile Number">
+                <input type="text" placeholder="Mobile Number" formControlName="customer_phone">
               </div>
             </div>
             <div class="right">
               <div class="form-input">
                 <label>Last Name</label>
-                <input type="text" placeholder="Last Name">
+                <input type="text" placeholder="Last Name" formControlName="customer_last_name">
               </div>
               <div class="form-input">
                 <label>Email</label>
-                <input type="email" placeholder="Email">
+                <input type="email" placeholder="Email" formControlName="customer_email">
               </div>
               <div class="form-input">
                 <label>Cover Type</label>
-                <input type="text" placeholder="Cover Type">
+                <select formControlName="cover_type_code">
+                  <option value="" selected disabled>Choose cover type</option>
+                  <option value="{{covertype.code}}" *ngFor="let covertype of covertypes">{{covertype.name}}</option>
+
+                </select>
+                <!-- <input type="text" placeholder="Cover Type" > -->
               </div>
             </div>
           </div>
@@ -57,63 +64,84 @@
             <div class="left">
               <div class="form-input">
                 <label>Schedule Type</label>
-                <input type="text" placeholder="Schedule Type">
+                <select formControlName="schedule_code">
+                    <option value="" selected disabled>Choose schedule type</option>
+                    <option value="{{schedule.code}}" *ngFor="let schedule of schedules">{{schedule.name}}</option>
+                  </select>
+                <!-- <input type="text" placeholder="Schedule Type" formControlName="schedule_code"> -->
               </div>
               <div class="form-input">
                 <label>Duration</label>
-                <input type="text" placeholder="Duration">
+                <select formControlName="duration">
+                  <option value="" selected disabled>Choose duration</option>
+                  <option value="{{duration.code}}" *ngFor="let duration of durations">{{duration.name}}</option>
+                </select>
+                <!-- <input type="text" placeholder="Duration" formControlName="duration"> -->
               </div>
               <div class="form-input">
                 <label>Year of Manufacture</label>
-                <input type="text" placeholder="Mobile Number">
+                <select formControlName="year_of_manufacture" (change)="onChangeYear($event)">
+                  <option value="" selected disabled>Choose year of manufacture</option>
+                  <option value="{{year.code}}" *ngFor="let year of years">{{year.name}}</option>
+                </select>
+                <!-- <input type="text" placeholder="Year of Manufacture" formControlName="year_of_manufacture"> -->
               </div>
               <div class="form-input">
                 <label>Make</label>
-                <input type="text" placeholder="Make">
+                <select formControlName="make">
+                  <option value="" selected disabled>Choose make</option>
+                  <option value="{{make.code}}" *ngFor="let make of makes">{{make.name}}</option>
+
+                </select>
+                <!-- <input type="text" placeholder="Make" formControlName="make"> -->
               </div>
             </div>
             <div class="right">
               <div class="form-input">
                 <label>Number of Seats</label>
-                <input type="text" placeholder="Number of Seats">
+                <input type="text" placeholder="Number of Seats" formControlName="seats">
               </div>
               <div class="form-input">
                 <label>Model</label>
-                <input type="text" placeholder="Model">
+                <input type="text" placeholder="Model" formControlName="model">
               </div>
               <div class="form-input">
                 <label>Cubic Capacity</label>
-                <input type="text" placeholder="Cubic capacity">
+                <input type="text" placeholder="Cubic capacity" formControlName="cubic_capacity">
               </div>
               <div class="form-input">
                 <label>Mileage</label>
-                <input type="text" placeholder="Mileage">
+                <input type="text" placeholder="Mileage" formControlName="mileage">
               </div>
             </div>
             <div class="right">
               <div class="form-input">
                 <label>Vehicle Registration Number</label>
-                <input type="text" placeholder="Vehicle Registration Number">
+                <input type="text" placeholder="Vehicle Registration Number" formControlName="vehicle_registration">
               </div>
               <div class="form-input">
                 <label>Chasis Number</label>
-                <input type="text" placeholder="Chasis Number">
+                <input type="text" placeholder="Chasis Number" formControlName="chasis_number">
               </div>
               <div class="form-input">
                 <label>Body Type</label>
-                <input type="text" placeholder="Body Type">
+                <select formControlName="body_type_code">
+                  <option value="" selected disabled>Choose body type</option>
+                  <option value="{{bodytypes.code}}" *ngFor="let bodytype of bodytypes">{{bodytype.name}}</option>
+                </select>
+                <!-- <input type="text" placeholder="Body Type" formControlName="body_type_code"> -->
               </div>
               <div class="form-input">
                 <label>Cost of Vehicle</label>
-                <input type="text" placeholder="Cost of Vehicle">
+                <input type="text" placeholder="Cost of Vehicle" formControlName="cost_of_car">
               </div>
             </div>
           </div>
       </div>
+      <div class="buttons">
+        <button class="btn btn-plain" (click)="route('')">Back</button>
+        <button class="btn btn-primary" [disabled]="!form.valid">Continue</button>
+      </div>
     </form>
-    <div class="buttons">
-      <button class="btn btn-plain" (click)="route('')">Back</button>
-      <button class="btn btn-primary" (click)="makerequest()">Continue</button>
-    </div>
   </div>
 </div>

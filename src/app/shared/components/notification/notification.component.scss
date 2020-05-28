@@ -1,0 +1,22 @@
+.messages {
+    // padding: 15px;
+    // width: 500px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-direction: column;
+}
+
+.close {
+    display: flex;
+    justify-content: flex-end;
+}
+.message {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.danger {
+    background: #fff5f5; 
+    color: #9b2c2c;
+}
