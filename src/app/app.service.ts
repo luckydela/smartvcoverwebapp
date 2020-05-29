@@ -9,7 +9,7 @@ import { ENDPOINTS } from './data.model';
 })
 
 export class AppService {
-    endpoint:any = 'https://c3cdd540.ngrok.io/smartCover/api/webApp/add_quotes_final_nic';
+    endpoint:any = 'https://https://smartcover-api-dev.azurewebsites.net/smartCover/api/webApp/add_quotes_final_nic';
     production:any = 'https://smartcover-api-dev.azurewebsites.net/';
     
 

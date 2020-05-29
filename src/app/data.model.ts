@@ -3,7 +3,7 @@ export let CUSTOMER_MENUS:any = [
     name: 'Policies',
     submenus: [
       {
-        name: 'Buy Policy',
+        name: 'Buy New Policy',
         img: 'buy-16.png',
         path:'buypolicy'
       },
@@ -23,12 +23,12 @@ export let CUSTOMER_MENUS:any = [
     name: 'Claims',
     submenus: [
       {
-        name: 'Make a new claim',
+        name: 'New Claim',
         img: 'add-user-2-16.png',
         path: 'make-a-claim'
       },
       {
-        name: 'My claim status',
+        name: 'Claim Status',
         img:'outline-16.png',
         path: 'claimstatus'
       },
@@ -43,7 +43,7 @@ export let CUSTOMER_MENUS:any = [
     name: 'Other',
     submenus: [
       {
-        name: 'My sticker',
+        name: 'My Sticker',
         img: 'checked-user-16.png',
         path: 'mysitcker'
       },

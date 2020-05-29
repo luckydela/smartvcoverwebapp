@@ -1,25 +1,61 @@
 <h4>Dashboard</h4>
 <div class="main-divider"></div>
 
+<div class="page">
 <div class="main-page">
 
-    <div class="left-side">
-        <div class="card">
+            <div class="left-side">
+                <img src="../../../assets/img/login-man.png" alt="">
+                <p>Hi, Welcome</p>
+                <h4>{{profiledata.first_name}} {{profiledata.last_name}}</h4>
+                <br>
+                <h3>{{profiledata.client_id}}</h3><br>
+                <h3>{{profiledata.email}}</h3><br>
+                <h3>{{profiledata.phone}}</h3><br>
+                <h3>{{profiledata.res_address}}</h3>
+              </div>
 
+              <div class="info">
+                  <div class="info-form">
+            <div class="left">
 
+                <div class="card">
+                <div class="form-input quote" (click)="quote()">
+                    <img src="../../../assets/img/create.png" alt="">
+                    <h3>Create Quote</h3>
+                </div>
+                </div>
+
+                <div class="card">
+                    <div class="form-input verify" (click)="verify()">
+                        <img src="../../../assets/img/verify.png" alt="">
+                        <h3>Verify Policy</h3>
+                    </div>
+                </div>
+               
+                <div class="right">
+
+                    <div class="card">
+                <div class="form-input pay" (click)="pay()">
+                    <img src="../../../assets/img/payment.png" alt="">
+                    <h3>Payments</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="form-input transact " (click)="transact()">
+                    <img src="../../../assets/img/transact.png" alt="">
+                    <h3>Transactions</h3>
+                </div>
+             </div>
+            </div>
         </div>
+     </div>
 
-        <div class="card">
-
-            
-        </div>
-    </div>
-    <div class="right-side">
-
-        <div class="card">
-            
-            
-        </div>
     </div>
 
 </div>
+
+</div>
+
+<router-outlet></router-outlet>

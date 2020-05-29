@@ -29,47 +29,53 @@
       <div class="form-input">
         <input type="password" name="pin" [(ngModel)]="user.pin" placeholder="Pin">
       </div>
-      <button (click)="login('client')" *ngIf="formtitle==='Customer Login'"> Log In </button>
-      <button (click)="login('agent')" *ngIf="formtitle==='Agent Login'"> Log In </button>
+      <button (click)="login('client')" *ngIf="formtitle==='Customer Login'"> Login </button>
+      <button (click)="login('agent')" *ngIf="formtitle==='Agent Login'"> Login </button>
+      <p id="formstate" (click)="show()">{{formstate}}</p>
       <div class="forgotten-password">
         <p (click)="changeform('createaccount')">Create Account</p>
         <p id="forgotten">Forgot Password?</p>
       </div>
-      <p id="formstate" (click)="show()">{{formstate}}</p>
     </div>
     <div class="login-form {{ submitstate }} create-account" *ngIf="formtype==='createaccount'">
         <app-notification [message]="notification.message" [type]="notification.type" *ngIf="notification.show" (emitterfn)='closenotification($event)'></app-notification>
         <h1>Create Account</h1>
         <div class="create">
           <div class="form-input">
-            <input type="text" name="first_name" [(ngModel)]="user.first_name" placeholder="Firstname">
+            <input type="text" name="first_name" [(ngModel)]="user.first_name" placeholder="First Name">
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Last Name">
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Created By">
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email">
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <input type="text" name="phone" [(ngModel)]="user.phone" placeholder="Phone Number">
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <input type="date" name="dob" [(ngModel)]="user.dob" placeholder="Date of Birth">
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <input type="text" name="gender" [(ngModel)]="user.gender" placeholder="Gender">
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <input type="text" name="idType" [(ngModel)]="user.idType" placeholder="ID Type">
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <input type="text" name="idNumber" [(ngModel)]="user.idNumber" placeholder="ID Number">
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <input type="text" name="res_address" [(ngModel)]="user.res_address" placeholder="Res. Address">
+          </div>
+          <div class="form-input">
+            <input type="text" name="postal_address" [(ngModel)]="user.postal_address" placeholder="Post. Address">
+          </div>
+           <div class="form-input">
+            <input type="password" name="pin" [(ngModel)]="user.pin" placeholder="Pin">
           </div>
           <!-- <div class="form-input">
             <input type="text" name="phone" [(ngModel)]="user.phone" placeholder="Phone Number">
@@ -80,7 +86,7 @@
         </div>
         <div class="forgotten-password">
           <p id="formstate" (click)="changeform('login')">Back to Login</p>
-          <button (click)="create()"> Create </button>
+          <button (click)="create()"> Create Account </button>
         </div>
       </div>
   </div>

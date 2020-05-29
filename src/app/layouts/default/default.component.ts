@@ -52,4 +52,9 @@ export class DefaultComponent implements OnInit {
     this.router.navigate(['/motorinsurance'])
   }
 
+  logout(){
+    window.localStorage.clear();
+    this.router.navigate(['']);
+  }
+
 }
