@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-notification',
@@ -7,29 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NotificationComponent implements OnInit {
 
-  @Input() message:any = ''
-  @Input() type:any = '' 
-  @Input() show:boolean = false;
-  @Input() time:any = ''
+  @Input() message:any = '';
+  @Input() type:any = '';
+  @Output() emitterfn = new EventEmitter();
   constructor() { }
 
-  ngOnInit() {
-    console.log(this.message);
-    
+  ngOnInit() { 
     
   }
-  ngAfterViewInit(){
-    // setTimeout(()=>{
-    //   this.show = false
-    // }, this.time)
-    // console.log('allen');
-    
-  }
-  ngAfterContentInit(): void {
-    // console.log('Kwasi');
-    
-  }
+
   close(){
-    this.show = false;
+   this.emitterfn.emit(false)
   }
 }

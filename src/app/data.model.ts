@@ -119,3 +119,9 @@ export let CUSTOMER_MENUS:any = [
       ]
     }
   ]
+
+ export let ENDPOINTS = {
+    main:'https://smartcover-api-dev.azurewebsites.net',
+    client:'/smartCover/api/client_login',
+    agent: '/smartCover/api/agents/sign_in'
+  }

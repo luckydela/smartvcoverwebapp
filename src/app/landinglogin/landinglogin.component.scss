@@ -15,6 +15,9 @@
         font-weight: 500;
         font-size: 1.8rem;
     }
+    #id {
+        z-index: 2;
+    }
 }
 .container::after{
     content: '';
@@ -55,6 +58,12 @@
         // color: #2d3748;
         font-weight: 500;
     }
+}
+.form-submit {
+    opacity: 0.7;
+}
+.form-after-submit {
+    opacity: 1;
 }
 .form-input {
     padding: 1rem;

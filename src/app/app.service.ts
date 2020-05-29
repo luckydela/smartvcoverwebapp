@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { forkJoin } from 'rxjs';
 
+import { ENDPOINTS } from './data.model';
 
 @Injectable({
     providedIn: 'root'
@@ -9,7 +10,10 @@ import { forkJoin } from 'rxjs';
 
 export class AppService {
     endpoint:any = 'https://c3cdd540.ngrok.io/smartCover/api/webApp/add_quotes_final_nic';
+    production:any = 'https://smartcover-api-dev.azurewebsites.net/';
     
+
+
     MID_SCHEDULES = "https://api.nicmid.com/apiv1/schedules";
     MID_BODY = "https://api.nicmid.com/apiv1/body_types/";
     MID_MAKE = "https://www.carqueryapi.com/api/0.3";
@@ -41,8 +45,9 @@ export class AppService {
 
     }
 
-    submitrequest(postdata:any){
-        return this.http.post(this.endpoint,postdata,this.options)
+    submitrequest(postdata:any,type:any){
+        
+        return this.http.post(ENDPOINTS.main+ENDPOINTS[type],JSON.stringify(postdata),this.options)
     }
     getcombodata(){
         let schedules = this.http.get(this.MID_SCHEDULES,{headers: this.httpGETHeaders});
@@ -61,5 +66,9 @@ export class AppService {
             value.push({name:i, code:i})
         }
         return value;
+    }
+
+    retrieveuserdata(){
+        return JSON.parse(localStorage.getItem('userdata'));
     }
 }
