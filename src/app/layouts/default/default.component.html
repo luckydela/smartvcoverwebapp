@@ -9,6 +9,7 @@
       smartCover
     </div>
     <div class="header-items">
+      <div class="header-item" (click)="motorinsurance()">Create Quote</div>
       <div class="header-item" (click)="route('viewquote')">View Quote</div>
       <div class="header-item" (click)="route('payments')">Payment</div>
       <div class="header-item" (click)="route('transactions')">Transactions</div>
@@ -20,7 +21,7 @@
   <div class="page">
     <aside>
       <div class="profile">
-        <img src="../../../assets/img/profile.jpg" alt="">
+        <img src="../../../assets/img/login-man.png" alt="">
         <h4>{{profiledata.firstname}} {{profiledata.lastname}}</h4>
         <h3>{{profiledata.id}}</h3>
       </div>

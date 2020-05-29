@@ -38,7 +38,7 @@ const routes: Routes = [
     {path:'buypolicy', component:BuypolicyComponent},
     {path:'transactions', component: TransactionsComponent},
     {path:'payments', component: PaymentsComponent},
-    {path:'viewquote', component: ViewquoteComponent} 
+    {path:'viewquote', component: ViewquoteComponent},
   ]
 
 },

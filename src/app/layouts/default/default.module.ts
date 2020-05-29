@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DefaultComponent } from './default.component';
 import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.component';
-// import { LandingloginComponent } from 'src/app/landinglogin/landinglogin.component';
+//import { LandingloginComponent } from 'src/app/landinglogin/landinglogin.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { ProfileComponent } from 'src/app/modules/profile/profile.component';
@@ -24,7 +24,7 @@ import { CreateaccountComponent } from 'src/app/createaccount/createaccount.comp
 
 @NgModule({
   declarations: [
-    // LandingloginComponent,
+  //LandingloginComponent,
     CreateaccountComponent,
     DefaultComponent,
     DashboardComponent,

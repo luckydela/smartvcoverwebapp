@@ -47,6 +47,9 @@ export class DefaultComponent implements OnInit {
   storeuserdata(userdata:any){
     localStorage.setItem('userdata',JSON.stringify(userdata))
   }
-  
+
+  motorinsurance(){
+    this.router.navigate(['/motorinsurance'])
+  }
 
 }
