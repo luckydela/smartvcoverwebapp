@@ -10,7 +10,7 @@
     <div class="header-item">Finally here, <span>Hi</span></div>
   </header>
   <div class="page">
-    <app-notification [message]="notification.message" [type]="notification.type" [show]="notification.show" [time]="notification.time"></app-notification>
+    <app-notification [message]="notification.message" [type]="notification.type" *ngIf="notification.show" (emitterfn)='closenotification($event)'></app-notification>
     
     <form [formGroup]="form" (ngSubmit)="makerequest()">
       <div class="personal-info">

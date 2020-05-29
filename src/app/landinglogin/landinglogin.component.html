@@ -19,19 +19,18 @@
         </div>
       </div>
     </div>
-    <div class="login-form">
+    <div class="login-form {{ submitstate }}">
+      <app-notification [message]="notification.message" [type]="notification.type" *ngIf="notification.show" (emitterfn)='closenotification($event)'></app-notification>
       <h1>{{formtitle}}</h1>
       <div class="form-input">
-        <input type="text" placeholder="Phone Number" *ngIf="formtitle==='Customer Login'">
-        <input type="text" placeholder="Agent ID" *ngIf="formtitle==='Agent Login'">
+        <input type="text" name="phone" [(ngModel)]="user.phone" placeholder="Phone Number" *ngIf="formtitle==='Customer Login'">
+        <input type="text" name="id" [(ngModel)]="user.id" placeholder="Adent ID" *ngIf="formtitle==='Agent Login'">
       </div>
       <div class="form-input">
-        <input type="password" placeholder="Pin" *ngIf="formtitle==='Customer Login'">
-        <input type="password" placeholder="Pin" *ngIf="formtitle==='Agent Login'">
+        <input type="password" name="pin" [(ngModel)]="user.pin" placeholder="Pin">
       </div>
-      <button (click)="login()"> Login </button>
-      <p id="formstate" (click)="show()">{{formstate}}</p>
-
+      <button (click)="login('client')" *ngIf="formtitle==='Customer Login'"> Log In </button>
+      <button (click)="login('agent')" *ngIf="formtitle==='Agent Login'"> Log In </button>
       <div class="forgotten-password">
         <p (click)="createAccount()">Create Account</p>
         <p id="forgotten">Forgot Password?</p>
