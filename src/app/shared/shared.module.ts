@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardComponent } from './components/card/card.component';
+import { CustomloaderComponent } from './components/customloader/customloader.component';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { CardComponent } from './components/card/card.component';
      SidebarComponent,
       FooterComponent,
       CardComponent,
+      CustomloaderComponent,
       
       
     ],

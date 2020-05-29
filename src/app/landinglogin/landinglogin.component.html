@@ -22,18 +22,20 @@
     <div class="login-form">
       <h1>{{formtitle}}</h1>
       <div class="form-input">
-        <input type="text" placeholder="Email" *ngIf="formtitle==='Customer Login'">
+        <input type="text" placeholder="Phone Number" *ngIf="formtitle==='Customer Login'">
         <input type="text" placeholder="Agent ID" *ngIf="formtitle==='Agent Login'">
       </div>
       <div class="form-input">
-        <input type="text" placeholder="Phone Number" *ngIf="formtitle==='Customer Login'">
+        <input type="password" placeholder="Pin" *ngIf="formtitle==='Customer Login'">
+        <input type="password" placeholder="Pin" *ngIf="formtitle==='Agent Login'">
       </div>
       <button (click)="login()"> Login </button>
+      <p id="formstate" (click)="show()">{{formstate}}</p>
+
       <div class="forgotten-password">
-        <p>Create Account</p>
+        <p (click)="createAccount()">Create Account</p>
         <p id="forgotten">Forgot Password?</p>
       </div>
-      <p id="formstate" (click)="show()">{{formstate}}</p>
     </div>
   </div>
 </div>

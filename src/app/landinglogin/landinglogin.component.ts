@@ -17,6 +17,11 @@ export class LandingloginComponent implements OnInit {
   login(){
     this.router.navigate(['/dashboard'])
   }
+
+  createAccount(){
+    this.router.navigate(['/createaccount'])
+  }
+
   route(path:any){
     this.router.navigate([path])
   }
@@ -24,4 +29,5 @@ export class LandingloginComponent implements OnInit {
     this.formstate = this.formstate === 'Agent Login' ? 'Customer Login' : 'Agent Login';
     this.formtitle = this.formstate === 'Agent Login' ? 'Customer Login' : 'Agent Login';
   }
+
 }
