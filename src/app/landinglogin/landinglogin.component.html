@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="login-form {{ submitstate }}">
+    <div class="login-form {{ submitstate }}" *ngIf="formtype==='login'">
       <app-notification [message]="notification.message" [type]="notification.type" *ngIf="notification.show" (emitterfn)='closenotification($event)'></app-notification>
       <h1>{{formtitle}}</h1>
       <div class="form-input">
@@ -32,10 +32,56 @@
       <button (click)="login('client')" *ngIf="formtitle==='Customer Login'"> Log In </button>
       <button (click)="login('agent')" *ngIf="formtitle==='Agent Login'"> Log In </button>
       <div class="forgotten-password">
-        <p>Create Account</p>
+        <p (click)="changeform('createaccount')">Create Account</p>
         <p id="forgotten">Forgot Password?</p>
       </div>
       <p id="formstate" (click)="show()">{{formstate}}</p>
     </div>
+    <div class="login-form {{ submitstate }} create-account" *ngIf="formtype==='createaccount'">
+        <app-notification [message]="notification.message" [type]="notification.type" *ngIf="notification.show" (emitterfn)='closenotification($event)'></app-notification>
+        <h1>Create Account</h1>
+        <div class="create">
+          <div class="form-input">
+            <input type="text" name="first_name" [(ngModel)]="user.first_name" placeholder="Firstname">
+          </div>
+          <div class="form-input">
+            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+          </div>
+          <div class="form-input">
+            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+          </div>
+          <div class="form-input">
+            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+          </div>
+          <div class="form-input">
+            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+          </div>
+          <div class="form-input">
+            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+          </div>
+          <div class="form-input">
+            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+          </div>
+          <div class="form-input">
+            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+          </div>
+          <div class="form-input">
+            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+          </div>
+          <div class="form-input">
+            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+          </div>
+          <!-- <div class="form-input">
+            <input type="text" name="phone" [(ngModel)]="user.phone" placeholder="Phone Number">
+          </div> -->
+          <!-- <div class="form-input">
+            <input type="password" name="pin" [(ngModel)]="user.pin" placeholder="Pin">
+          </div> -->          
+        </div>
+        <div class="forgotten-password">
+          <p id="formstate" (click)="changeform('login')">Back to Login</p>
+          <button (click)="create()"> Create </button>
+        </div>
+      </div>
   </div>
 </div>

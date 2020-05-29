@@ -13,6 +13,7 @@ export class LandingloginComponent implements OnInit {
   submitstate:any = ''
   user:any = {id:'',phone:'',pin:''}
   notification:any = {message:'', type:'', show: false, time: ''}
+  formtype:any = 'login'
   
   constructor(private router: Router, private appservice: AppService) { }
 
@@ -45,6 +46,9 @@ export class LandingloginComponent implements OnInit {
   }
   route(path:any){
     this.router.navigate([path])
+  }
+  changeform(name:any){
+    this.formtype = name;
   }
   show(state:any){
     this.formstate = this.formstate === 'Agent Login' ? 'Customer Login' : 'Agent Login';

@@ -36,10 +36,11 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    margin-top: 10%;
+    // margin-top: 5%;
     z-index: 2;
 }
 .login-form {
+    margin-top: 5%;
     padding: 1.5rem;
     background-color: rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
@@ -57,6 +58,19 @@
         cursor: pointer;
         // color: #2d3748;
         font-weight: 500;
+    }
+}
+.create-account {
+    background-color: rgba(255, 255, 255, 0.3);
+    flex: 0.6;
+}
+.create {
+    display: flex;
+    flex-wrap: wrap;
+
+    .form-input {
+        flex-basis:25%;
+        padding: 0.5rem;
     }
 }
 .form-submit {
