@@ -108,7 +108,7 @@ header::after{
 label {
     text-align: left;
     margin-bottom: 3px;
-    color: rgba(62, 157, 225, 0.6);
+    color: #03a1f9;
     font-weight: 400;
     font-size: 0.9rem;
 }
@@ -155,19 +155,19 @@ input:focus {
     outline: none;
 }
 .btn-plain {
-    border: 1px solid rgb(62, 157, 225);
+    border: 1px solid #03a1f9;
     background: #fff;
-    color: rgb(62, 157, 225);
+    color: #03a1f9;
     
 }
 .btn-plain::before {
     content: '\2190';
-    color: rgb(62, 157, 225);
+    color: #03a1f9;
 }
 .btn-primary {
     border: none;
     color: #fff;
-    background: rgb(62, 157, 225);
+    background: #03a1f9;
 }
 .btn-primary::after {
     content: '\2192';
