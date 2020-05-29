@@ -6,13 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DefaultModule } from './layouts/default/default.module';
 import { MotorinsuranceComponent } from './modules/motorinsurance/motorinsurance.component';
+import { NotificationComponent } from './shared/components/notification/notification.component';
 import { AppService } from './app.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     MotorinsuranceComponent,
-   
+    NotificationComponent
   ],
   imports: [
     BrowserModule,

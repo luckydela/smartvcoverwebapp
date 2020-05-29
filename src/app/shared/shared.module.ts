@@ -12,6 +12,7 @@ import { CardComponent } from './components/card/card.component';
       FooterComponent,
       CardComponent,
       
+      
     ],
   imports: [
     CommonModule
