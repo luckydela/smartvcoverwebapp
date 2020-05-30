@@ -37,51 +37,53 @@
       </div>
       <p id="formstate" (click)="show()">{{formstate}}</p>
     </div>
-    <div class="login-form {{ submitstate }} create-account" *ngIf="formtype==='createaccount'">
-        <app-notification [message]="notification.message" [type]="notification.type" *ngIf="notification.show" (emitterfn)='closenotification($event)'></app-notification>
-        <h1>Create Account</h1>
+    <div class="create-account {{ submitstate }}" *ngIf="formtype==='createaccount'">
+      <app-notification [message]="notification.message" [type]="notification.type" *ngIf="notification.show" (emitterfn)='closenotification($event)'></app-notification>
+      <h1>Create Account</h1>
+      <form [formGroup]="form" (ngSubmit)="makerequest('create_account')">
         <div class="create">
           <div class="form-input">
-            <input type="text" name="first_name" [(ngModel)]="user.first_name" placeholder="Firstname">
+            <input type="text" name="first_name" formControlName="first_name" placeholder="Firstname">
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <input type="text" name="last_name" formControlName="last_name" placeholder="Lastname">
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <input type="text" name="email" formControlName="email" placeholder="Email">
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <input type="text" name="pin" formControlName="pin" placeholder="Pin">
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <select formControlName="idtype">
+              <option value="" selected disabled>ID Type</option>
+              <option value="{{idtype}}" *ngFor="let idtype of idtypes">{{idtype}}</option>
+            </select>
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <input type="text" name="idNumber" formControlName="idNumber" placeholder="ID Number">
+          </div>
+          <div class="form-input" >
+            <input type="date" name="dob" formControlName="dob" placeholder="Date of Birth">
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <select formControlName="gender">
+              <option value="" selected disabled>Gender</option>
+              <option value="{{gen}}" *ngFor="let gen of gender">{{gen}}</option>
+            </select>
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
+            <textarea type="text" name="res_address" formControlName="res_address" placeholder="Residential Address"></textarea>
           </div>
           <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
-          </div>
-          <div class="form-input">
-            <input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="Lastname">
-          </div>
-          <!-- <div class="form-input">
-            <input type="text" name="phone" [(ngModel)]="user.phone" placeholder="Phone Number">
-          </div> -->
-          <!-- <div class="form-input">
-            <input type="password" name="pin" [(ngModel)]="user.pin" placeholder="Pin">
-          </div> -->          
+            <textarea type="text" name="postal_address" formControlName="postal_address" placeholder="Postal Address"></textarea>
+          </div>          
         </div>
         <div class="forgotten-password">
-          <p id="formstate" (click)="changeform('login')">Back to Login</p>
-          <button (click)="create()"> Create </button>
+          <button>Create</button>
         </div>
-      </div>
+      </form>
+      <button id="back" (click)="changeform('login')">Back to Login</button>
+    </div>
   </div>
 </div>

@@ -63,13 +63,32 @@
 .create-account {
     background-color: rgba(255, 255, 255, 0.3);
     flex: 0.6;
+    padding: 1.5rem 1rem 0 1.5rem;
+    margin-top: 2%;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #f6a569;
+    h1 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+    #formstate {
+        cursor: pointer;
+        // color: #2d3748;
+        font-weight: 500;
+    }
 }
 .create {
     display: flex;
     flex-wrap: wrap;
 
     .form-input {
-        flex-basis:25%;
+        flex-basis:10%;
         padding: 0.5rem;
     }
 }
@@ -82,17 +101,28 @@
 .form-input {
     padding: 1rem;
 
-    input {
-        padding: 0.7rem 0 0.7rem 1.2rem;
+    input,textarea,select {
+        padding: 0.7rem 0.5rem 0.7rem 1.2rem;
         border-radius: 20px;
         border: none;
-        background: #fff;
+        background-color: #fff;
         box-shadow: 0 10px 10px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
         &:focus {
             outline: none;
         }
-    }    
+    }
+    select { 
+        background: url("../../assets/img/1492790985-3arrow-down_84192.png") right center no-repeat; 
+        background-size: 15px 15px;
+        appearance: none;
+        background-color: #fff;
+        width: 200px;
+    }
+    input[type=date]{
+        width: 175px;
+    } 
+    
 }
 button {
     padding: 10px 25px;
@@ -103,14 +133,21 @@ button {
     color: #fff;
     font-weight: 400;
     letter-spacing: 1px;
+    margin-left: 10px;
     cursor: pointer;
+    // width: 200px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+#back {
+    background: #fff;
+    color: #FF8C8D;
+    font-weight: 800;
 }
 .forgotten-password {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     cursor: pointer;
     p {
         margin: 0.3rem;
@@ -162,6 +199,7 @@ img {
 }
 
 
+
 @media only screen and (min-width: 540px){
   .container-inner {
       flex-direction: row;
@@ -171,4 +209,13 @@ img {
         margin: 1rem;
     }
   }
+  .create {
+    display: flex;
+    flex-wrap: wrap;
+
+    .form-input {
+        flex-basis:25%;
+        padding: 0.5rem;
+    }
+}
 }

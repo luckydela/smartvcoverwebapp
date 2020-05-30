@@ -46,7 +46,6 @@ export class AppService {
     }
 
     submitrequest(postdata:any,type:any){
-        
         return this.http.post(ENDPOINTS.main+ENDPOINTS[type],JSON.stringify(postdata),this.options)
     }
     getcombodata(){

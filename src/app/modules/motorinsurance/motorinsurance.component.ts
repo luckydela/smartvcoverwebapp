@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { AppService } from '../../app.service';
 
@@ -72,9 +72,7 @@ export class MotorinsuranceComponent implements OnInit {
   }
 
   makerequest(type:any){
-
-   console.log(this.form.value);
-   
+       
     this.appservice.submitrequest(this.form.value,type).subscribe(returneddata => {
       console.log(returneddata);
       
