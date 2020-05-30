@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { AppService } from '../../app.service';
 
@@ -13,23 +12,6 @@ import { AppService } from '../../app.service';
   styleUrls: ['./motorinsurance.component.scss']
 })
 export class MotorinsuranceComponent implements OnInit {
-
-  private httpHeaders = new HttpHeaders()
-  .set('Content-Type', 'application/json')
-  //.set('Access-Control-Allow-Origin', '*')
-  //.set('Access-Control-Allow-Origin', '*')
-  .set("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT")
-  .set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-
-private options = {
-  headers: this.httpHeaders
-};
-
-
-
-
-
-
   form: FormGroup
   schedules:any;
   bodytypes:any;
@@ -39,7 +21,7 @@ private options = {
   durations:any=[{name:'One Year',code:1},{name:'Short Rate',code:2},{name: 'Prorata', code:3}];;
   notification:any = {message:'', type:'', show: false, time: ''}
 
-  constructor(public http: HttpClient,  private router: Router, private appservice: AppService,private fb: FormBuilder) {
+  constructor(private router: Router, private appservice: AppService,private fb: FormBuilder) {
 
     this.form = this.fb.group({
       customer_first_name: [''],
@@ -90,9 +72,7 @@ private options = {
   }
 
   makerequest(type:any){
-
-   console.log(this.form.value);
-   
+       
     this.appservice.submitrequest(this.form.value,type).subscribe(returneddata => {
       console.log(returneddata);
       

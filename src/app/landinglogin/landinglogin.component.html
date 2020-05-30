@@ -38,9 +38,10 @@
         <p id="forgotten">Forgot Password?</p>
       </div>
     </div>
-    <div class="login-form {{ submitstate }} create-account" *ngIf="formtype==='createaccount'">
-        <app-notification [message]="notification.message" [type]="notification.type" *ngIf="notification.show" (emitterfn)='closenotification($event)'></app-notification>
-        <h1>Create Account</h1>
+    <div class="create-account {{ submitstate }}" *ngIf="formtype==='createaccount'">
+      <app-notification [message]="notification.message" [type]="notification.type" *ngIf="notification.show" (emitterfn)='closenotification($event)'></app-notification>
+      <h1>Create Account</h1>
+      <form [formGroup]="form" (ngSubmit)="makerequest('create_account')">
         <div class="create">
           <div class="form-input">
             <input type="text" name="first_name" [(ngModel)]="user.first_name" placeholder="First Name">
@@ -89,6 +90,8 @@
           <p id="formstate" (click)="changeform('login')">Back to Login</p>
           <button (click)="create()"> Create Account </button>
         </div>
-      </div>
+      </form>
+      <button id="back" (click)="changeform('login')">Back to Login</button>
+    </div>
   </div>
 </div>

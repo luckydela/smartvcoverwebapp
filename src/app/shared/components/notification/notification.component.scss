@@ -1,28 +1,36 @@
-// .messages {
-    // padding: 15px;
-    // width: 500px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // flex-direction: column;
-    // z-index: 9999;
-// }
-
-.close {
+.container {
     display: flex;
-    justify-content: flex-end;
-    cursor: pointer;
-}
-.message {
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
     border-radius: 5px;
     z-index: 3;
     transition: all 5s;
+    width: 100%;
+
+    .message {
+        word-wrap: normal;
+        max-width: 250px;
+        font-size: 0.8rem;
+        
+    }
+    .close {
+        line-height: 2px;
+        font-weight: 900;
+        font-size: 0.8rem;
+        cursor: pointer;
+    }
 }
 
 .danger {
     background: #fff5f5; 
     color: #9b2c2c;
+    z-index: 3;
+    transition: all 5s;
+}
+.success {
+    background: #e6fffa; 
+    color: #2c7a7b;
     z-index: 3;
     transition: all 5s;
 }
