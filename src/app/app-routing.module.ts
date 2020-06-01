@@ -35,7 +35,7 @@ const routes: Routes = [
     {path:'claimstatus', component: ClaimstatusComponent},
     {path:'make-a-claim', component: MakeaclaimComponent},
     {path:'mypolicies', component:MypoliciesComponent},
-    {path:'buypolicy', component:BuypolicyComponent},
+    {path:'buy-and-renew-policy', component:BuypolicyComponent},
     {path:'transactions', component: TransactionsComponent},
     {path:'payments', component: PaymentsComponent},
     {path:'viewquote', component: ViewquoteComponent},

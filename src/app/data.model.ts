@@ -69,12 +69,12 @@ export let AGENT_MENUS:any = [
       {
         name: 'Buy Policy',
         img: 'buy-16.png',
-        path:'buypolicy'
+        path:'buy-and-renew-policy'
       },
       {
         name: 'Renew Policy',
         img:'buy-2-16.png',
-        path: 'mypolicies'
+        path: 'buy-and-renew-policy'
       },
       {
         name: 'My Policies',

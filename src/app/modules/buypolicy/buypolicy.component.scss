@@ -1,0 +1,32 @@
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.card-item {
+    // background-color: rgba(28, 142, 227, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    cursor: pointer;
+    // margin: 20px;
+    .card-left {
+        display: flex;
+        align-items: center;
+    }
+    // p{
+    //   color: rgb(238, 240, 241);
+    // }
+}
+img {
+    height: 80px; 
+    width: 80px;
+    margin-right: 1rem;
+}
+#icon {
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+}
+

@@ -177,11 +177,7 @@ img {
     #left-heading {
         font-size: 1.5rem;
         margin-bottom: 10px;
-        color: #fff;
-    }
-    span{
         color: #ff8b8c;
-
     }
     .menu-items {
         box-sizing: border-box;
@@ -192,13 +188,12 @@ img {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 3em;
+            margin: 1.7em;
             cursor: pointer;
             p {
-                font-size: 1.0rem;
+                font-size: 0.9rem;
                 opacity: 1;
             }
-           
         }
     }
 }
